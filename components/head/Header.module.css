@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+#header {
+    display: grid;
+    grid-template-columns: repeat(2, 1f);
+    grid-template-areas: 'title picture';
+}
+
+#title {
+    padding: 50px 0 50px 50px;
+    grid-area: title;
+    display: grid;
+    place-content: center;
+}
+
+#title h1{
+  font-family: 'Dancing Script', cursive;
+  color: #A8AAE7;
+  font-size: 80px;
+}
+
+#title div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#title div hr {
+   width: 350px;
+
+}
+
+#title div h2 {
+    font-size: 25px;
+}
+
+#picture {
+    padding: 50px 20% 50px 0;
+    grid-area: picture;
+    display: grid;
+    justify-items: right;
+    align-content: center;
+}
+
+@media only screen and (max-width: 575px){
+    #header {
+        margin-top: 150px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    #title {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #title h1{
+      font-family: 'Dancing Script', cursive;
+      color: #A8AAE7;
+      font-size: 50px;
+    }
+    
+    #title div {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    #title div hr {
+       width: 250px;
+    
+    }
+    
+    #title div h2 {
+        font-size: 15px;
+    }
+    
+    #picture {
+        display: none;
+    }
+    
+}

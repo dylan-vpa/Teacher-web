@@ -1,0 +1,122 @@
+@keyframes appear {
+    0% {
+        left: -100%;
+    }
+    100%{
+        left: 0;
+    }
+}
+
+@keyframes rotateone {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes rotatetwo {
+    0% {
+        transform: rotate(90deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+#nav {
+    margin:15px 15px 15px 0;
+    display: flex;
+    height: 80px; 
+}
+
+#toogle {
+    margin: 0 15px 0 15px;
+    position: relative;
+    z-index: 1;
+    font-size: 30px;
+    color: #E2AABA;
+    background-color: #1F212B;
+    transform: rotate(0deg);
+    animation: rotatetwo 0.4s;
+}
+
+#toogley {
+    margin: 0 15px 0 15px;
+    position: relative;
+    z-index: 1;
+    font-size: 30px;
+    color: #E2AABA;
+    background-color: #1F212B;
+    transform: rotate(90deg);
+    animation: rotateone 0.4s;
+}
+
+#items {
+    position: relative;
+    width: 100%;
+    animation: appear 1s;
+}
+
+#hideitems {
+    width: 0;
+    overflow: hidden;
+    animation: none;
+    transition: ease 1s;
+}
+
+#items ul,#hideitems ul {
+    padding: 0 15px 0 100px;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+#items li, #hideitems li {
+    list-style: none;
+}
+
+#items a, #hideitems a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#items a:hover {
+    color: #E2AABA;
+    transition: ease 0.3s;
+}
+
+#flower {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.flower {
+    margin-top: -15px;
+    height: 150px;
+    width: auto;
+}
+
+@media only screen and (max-width: 575px){
+
+    #nav {
+        height: 120px; 
+}
+
+    #items {
+        position: relative;
+        width: 150%;
+    }
+
+    #hideitems {
+        height: 120px;
+    }
+
+    #items ul,#hideitems ul {
+        flex-direction: column;
+        gap: 50px;
+    }
+    
+}
